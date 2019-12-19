@@ -15,11 +15,11 @@ This project is a template of a Murano IoT-Connector that interoperates with The
 
 ## About This Project
 
-This is a Murano IoT Connector Template specifically configured for Cloud to Cloud communications with [The Things Network](https://www.thethingsnetwork.org/), and works out of the box with a [Dragino LT-33222-L LoRa I/O Controller](https://www.dragino.com/products/lora-lorawan-end-node/item/138-lt-33222-l.html).
+This is a Murano IoT Connector Template specifically configured for Cloud to Cloud communications with [The Things Network](https://www.thethingsnetwork.org/), and works out of the box with a [Dragino LT-33222-L LoRa I/O Controller](https://www.dragino.com/products/lora-lorawan-end-node/item/138-lt-33222-l.html).<br>
 <br>
-It is based on the [Getting Started Solution Template](https://github.com/exosite/getting-started-solution-template/tree/cloud2cloud-product) for Cloud to Cloud integrations.
+It is based on the [Getting Started Solution Template](https://github.com/exosite/getting-started-solution-template/tree/cloud2cloud-product) for Cloud to Cloud integrations.<br>
 <br>
-To use this project, first try following the [High level user guide](https://github.com/exosite/exosense_recipes/tree/master/TTN).  The instructions there will deploy a copy of this template into a Murano Solution in your business by using [the published Murano Exchange element](https://www.exosite.io/business/exchange/catalog/component/5dfb0070e1041e4cc6982817).  You can also fork this repository and create your own custom solution from your fork.
+To use this project, first try following the [High level user guide](https://github.com/exosite/exosense_recipes/tree/master/TTN).  The instructions there will deploy a copy of this template into a Murano Solution in your business by using [the published Murano Exchange element](https://www.exosite.io/business/exchange/catalog/component/5dfb0070e1041e4cc6982817).  You can also fork this repository and create your own custom solution from your fork.<br>
 <br>
 Once this project has been instantiated inside of Murano as a solution, it:<br>
 1.) receives TTN payloads on the callback URL (<your solution URL>/c2c/callback)<br>
@@ -31,7 +31,7 @@ Once this project has been instantiated inside of Murano as a solution, it:<br>
 Steps 1-4 are done in the [transform.lua module](./modules/vendor/c2c/transform.lua), and the config_io initialization (step 5) comes from the [configIO.lua module](./modules/vendor/configIO.lua).
 <br>
 If you have hardware other than the Dragino LT-33222-L LoRa I/O Controller, the code that does step 3 and step 5 will need to be modified (see next section).<br>
-
+<br>
 ---
 
 ## Configure for Different LoRa device
