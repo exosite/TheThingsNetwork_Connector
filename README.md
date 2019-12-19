@@ -11,6 +11,7 @@ This project is a template of a Murano IoT-Connector that interoperates with The
 - [About This Project](#about-this-project)
 - [Configure for Different LoRa Device](#configure-for-different-lora-device)
 - [ToDo](#todo)
+
 ---
 
 ## About This Project
@@ -28,10 +29,11 @@ Once this project has been instantiated inside of Murano as a solution, it:<br>
 4.) cherry picks the "hardware_serial" value from the TTN payload and uses it as the unique device identifier in Murano<br>
 5.) if a new device identifier is found, instantiates a new device and programs its "config_io" resource<br>
 <br> 
-Steps 1-4 are done in the [transform.lua module](./modules/vendor/c2c/transform.lua), and the config_io initialization (step 5) comes from the [configIO.lua module](./modules/vendor/configIO.lua).
+Steps 1-4 are done in the [transform.lua module](./modules/vendor/c2c/transform.lua), and the config_io initialization (step 5) comes from the [configIO.lua module](./modules/vendor/configIO.lua).<br>
 <br>
 If you have hardware other than the Dragino LT-33222-L LoRa I/O Controller, the code that does step 3 and step 5 will need to be modified (see next section).<br>
 <br>
+  
 ---
 
 ## Configure for Different LoRa device
