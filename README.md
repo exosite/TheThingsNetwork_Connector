@@ -1,9 +1,9 @@
 
-# Murano Cloud-Connector
+# Murano Cloud-Connector for The Things Network
 
-This project is a template of Murano IoT-Connector for 3rd party components integration.
+This project is a template of a Murano IoT-Connector that interoperates with The Things Network. 
 
-See related documentation on http://docs.exosite.com/connectivity/cloud2cloud/
+See high level documentation at https://github.com/exosite/exosense_recipes/tree/master/TTN
 
 ## Table of Content
 
@@ -262,9 +262,4 @@ Assuming you have a workable 3rd party cloud integrated and followed the above `
 
 ---
 
-### Known limitations
 
-- As external service don't have an event API, current version requires the webservice to add custom routes for callback. (MUR-9171)
-- If the 3rd party api requires signature header, the signature management needs to be done in Lua.
-- Device2 service doesn't support batch functionality yet.
-- Exosense `config_io` is fixed (in [modules/vendor/configIO.lua](modules/vendor/configIO.lua)) and cannot be modified per device.
