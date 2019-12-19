@@ -1,0 +1,4 @@
+
+# Un-comment to enable active polling interval to fetch data from remote cloud
+# schedule:
+#   hourly: true

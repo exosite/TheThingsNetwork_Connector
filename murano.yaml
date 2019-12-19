@@ -1,0 +1,50 @@
+---
+# The format version of this file. This is required.
+formatversion: 1.0.0
+
+info:
+  name: Cloud to Murano Product
+  description: Template example for integrating 3rd party could to Murano Products
+  authors:
+    - 'exosite'
+  version: 0.1.0
+
+options:
+  safeNamespace: vendor
+  safeConfigs: # Below user settings will persist, template version update
+   - timer
+   - device2.resources
+   - config.auto_update
+
+env_schema:
+  description: |
+    This will show on Murano Connector page.
+    Describe the 3rd party integration setup, with link to related documentation.
+  callback_token: # This token is only needed if not 3rd party API swagger service is defined
+    title: Callback Token
+    type: string
+    description: The callback token. Used in `c2c.authentication` module.
+
+endpoints:
+  location: endpoints
+  include: '**/*.lua'
+  exclude: ['*_test.lua', '*_spec.lua']
+
+# No static files are needed for this example but you could add some.
+# assets:
+#   location: assets
+#   include: '**/*'
+#   exclude: []
+#   default_page: index # This only works for assets not for any other endpoints
+
+modules:
+  location: modules
+  include: '**/*.lua'
+  exclude: ['*_test.lua', '*_spec.lua']
+
+services:
+  location: services
+  include: '**/*.lua'
+  exclude: ['*_test.lua', '*_spec.lua']
+
+init_script: init.lua
