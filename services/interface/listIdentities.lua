@@ -6,7 +6,7 @@ end
 local configIO = require("vendor.configIO")
 if configIO and configIO.config_io and identities.devices and next(identities.devices) ~= nil then
   local config_io = {
-    timestamp = (configIO.timestamp or os.time(os.date("!*t"))) * 1000000, -- from Unix timestamp (Sec) to MicroSec
+    timestamp = require("c2c.utils").getTimestamp(configIO.timestamp),
     set = configIO.config_io,
     reported = configIO.config_io
   }

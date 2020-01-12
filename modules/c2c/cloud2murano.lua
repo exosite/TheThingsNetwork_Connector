@@ -5,6 +5,7 @@ local cloud2murano = {}
 local configIO = require("vendor.configIO")
 local transform = require("vendor.c2c.transform")
 local mcrypto = require("staging.mcrypto")
+local utils = require("c2c.utils")
 local device2 = murano.services.device2 -- to bypass the proxy (device2.lua)
 -- Beware of not creating recursive reference with murano2cloud
 
@@ -14,7 +15,7 @@ function cloud2murano.trigger(identity, event_type, payload, options)
       ip = options.ip,
       type = event_type,
       identity = identity,
-      timestamp = options.timestamp or os.time(os.date("!*t")),
+      timestamp = utils.getTimestamp(options.timestamp),
       connection_id = options.request_id or context.tracking_id,
       payload = payload
     }
@@ -75,7 +76,7 @@ function cloud2murano.data_in(identity, data, options)
   data.identity = nil
   local payload = {{
     values = data,
-    timestamp = (options.timestamp or os.time(os.date("!*t")))
+    timestamp = utils.getTimestamp(options.timestamp)
   }}
   return cloud2murano.trigger(identity, "data_in", payload, options)
 end
