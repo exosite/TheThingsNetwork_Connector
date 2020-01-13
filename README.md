@@ -2,7 +2,7 @@
 # Murano Cloud-Connector for The Things Network
 
 This project is a template of a Murano IoT-Connector that interoperates with The Things Network. 
-<br>
+<br><br>
 [High level user documentation](https://github.com/exosite/exosense_recipes/tree/master/TTN)<br>
 [Detailed C2C Template information](https://github.com/exosite/getting-started-solution-template/tree/cloud2cloud-product)<br>
 
